@@ -16,6 +16,7 @@ const TaskForm = ({ onTaskAdded }) => {
 
     try {
       const newTask = await taskService.createTask({ title });
+      window.location.reload();   // zedto bax t reloada la page 
       setTitle('');
       if (onTaskAdded) onTaskAdded(newTask);
     } catch (error) {
@@ -38,7 +39,7 @@ const TaskForm = ({ onTaskAdded }) => {
           onChange={(e) => setTitle(e.target.value)}
           disabled={submitting}
         />
-        <button type="submit" disabled={submitting}>
+        <button type="submit" disabled={submitting} >
           {submitting ? 'Ajout...' : 'Ajouter'}
         </button>
       </form>

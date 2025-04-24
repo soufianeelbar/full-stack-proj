@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const apiClient = axios.create({
-  baseURL: process.env.REACT_APP_API_URL || 'http://localhost:5000/api',
+  baseURL: process.env.REACT_APP_API_URL ||  'https://profound-radiance-production.up.railway.app/api' ,//'http://localhost:5000/api',    // change to work with hosted BAckend
   headers: {
     'Content-Type': 'application/json'
   }
