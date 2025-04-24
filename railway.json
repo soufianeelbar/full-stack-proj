@@ -1,0 +1,13 @@
+{
+  "build": {
+    "env": {
+      "NODE_ENV": "production"
+    }
+  },
+  "deploy": {
+    "commands": {
+      "backend": "cd api-server && npm install && npm run build",
+      "frontend": "cd client && npm install && npm run build"
+    }
+  }
+}
