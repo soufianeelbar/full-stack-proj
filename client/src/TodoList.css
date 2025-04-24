@@ -1,0 +1,88 @@
+.todo-container {
+  max-width: 400px;
+  margin: 40px auto;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.11);
+  padding: 32px 24px 24px 24px;
+  font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+.todo-container h2 {
+  color: #3f51b5;
+  margin-bottom: 18px;
+}
+
+.todo-form {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.todo-form input[type="text"] {
+  flex: 1;
+  padding: 8px 12px;
+  border: 1px solid #d1d1d1;
+  border-radius: 6px;
+  font-size: 16px;
+}
+
+.todo-form button {
+  background: #3f51b5;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 8px 18px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.todo-form button:disabled {
+  background: #b0b0b0;
+  cursor: not-allowed;
+}
+
+.todo-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.todo-list li {
+  background: #f5f5f5;
+  margin-bottom: 10px;
+  padding: 12px 16px;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  font-size: 17px;
+  transition: background 0.2s;
+}
+
+.todo-list li:last-child {
+  margin-bottom: 0;
+}
+
+.todo-list li.completed {
+  text-decoration: line-through;
+  color: #aaa;
+  background: #e0e0e0;
+}
+
+.todo-list li .status {
+  margin-left: auto;
+  font-size: 18px;
+}
+
+.error-message {
+  color: #e53935;
+  margin-bottom: 12px;
+  text-align: left;
+}
+
+@media (max-width: 500px) {
+  .todo-container {
+    padding: 16px 4px;
+  }
+}
